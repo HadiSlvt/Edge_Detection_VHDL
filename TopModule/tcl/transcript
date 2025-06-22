@@ -1,0 +1,64 @@
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do multiplier.tcl
+# 100000000000
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work 
+# Reading C:/modeltech64_2020.4/win64/../modelsim.ini
+# "work" maps to directory ./work. (Default mapping)
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap unisim 
+# Reading C:/modeltech64_2020.4/win64/../modelsim.ini
+# "unisim" maps to directory C:/modeltech64_2020.4/vhdl_libs/unisim.
+# Model Technology ModelSim SE-64 vcom 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:56:55 on Feb 14,2025
+# vcom -reportprogress 300 -2008 ../source/multiplier.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity multiplier
+# -- Compiling architecture Behavioral of multiplier
+# End time: 00:56:55 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:56:55 on Feb 14,2025
+# vcom -reportprogress 300 -2008 ../test/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture behavior of testbench
+# End time: 00:56:55 on Feb 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps -vopt testbench -voptargs="+acc" 
+# Start time: 00:56:55 on Feb 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.multiplier(behavioral)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (100ps).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/multiplier_Inst/DSP1
+# Loading unisim.dsp48e1(dsp48e1_v)#1
+# Loading unisim.dsp48e1(dsp48e1_v)#2
+# End time: 00:57:45 on Feb 14,2025, Elapsed time: 0:00:50
+# Errors: 0, Warnings: 1

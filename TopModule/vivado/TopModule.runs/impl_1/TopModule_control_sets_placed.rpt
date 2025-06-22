@@ -1,0 +1,76 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Jun 22 11:09:40 2025
+| Host         : Hadi running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TopModule_control_sets_placed.rpt
+| Design       : TopModule
+| Device       : xczu4eg
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |     1 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      8 |            5 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             500 |           83 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              12 |            3 |
+| Yes          | No                    | No                     |             247 |           63 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              32 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------------+-------------------------------------------+------------------+----------------+
+|  Clock Signal  |             Enable Signal            |              Set/Reset Signal             | Slice Load Count | Bel Load Count |
++----------------+--------------------------------------+-------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                      | syncIn_IBUF_inst/O                        |                1 |              4 |
+|  clk_IBUF_BUFG |                                      | NoiseFilter/InvDivMult/DSP48E2_inst/P[47] |                2 |              8 |
+|  clk_IBUF_BUFG | NoiseFilter/E[0]                     | syncIn_IBUF_inst/O                        |                2 |              8 |
+|  clk_IBUF_BUFG | NoiseFilter/bffrEdgeRdAddr_reg[3][0] | syncIn_IBUF_inst/O                        |                3 |              8 |
+|  clk_IBUF_BUFG | inputRdy_IBUF_inst/O                 | syncIn_IBUF_inst/O                        |                2 |              8 |
+|  clk_IBUF_BUFG | bffrNoiseRowCnt[7]_i_1_n_0           | syncIn_IBUF_inst/O                        |                3 |              8 |
+|  clk_IBUF_BUFG | bffrNoise/WEA[0]                     |                                           |               22 |             72 |
+|  clk_IBUF_BUFG | bffrEdge/WEA[0]                      |                                           |               10 |             72 |
+|  clk_IBUF_BUFG | syncIn_IBUF_inst/O                   |                                           |               39 |            103 |
+|  clk_IBUF_BUFG |                                      |                                           |               83 |            501 |
++----------------+--------------------------------------+-------------------------------------------+------------------+----------------+
+
+

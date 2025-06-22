@@ -1,0 +1,693 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Jun 22 11:08:09 2025
+# Process ID: 2344
+# Current directory: C:/Users/hadis/Documents/VHDL/TopModule/vivado/TopModule.runs/synth_1
+# Command line: vivado.exe -log TopModule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopModule.tcl
+# Log file: C:/Users/hadis/Documents/VHDL/TopModule/vivado/TopModule.runs/synth_1/TopModule.vds
+# Journal file: C:/Users/hadis/Documents/VHDL/TopModule/vivado/TopModule.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TopModule.tcl -notrace
+Command: synth_design -top TopModule -part xczu4eg-fbvb900-3-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu4eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu4eg'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16792 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 430.176 ; gain = 97.805
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TopModule' [C:/Users/hadis/Documents/VHDL/TopModule/source/TopModule.vhd:34]
+	Parameter pictureWidth bound to: 256 - type: integer 
+	Parameter pictureHeight bound to: 256 - type: integer 
+	Parameter coefWidth bound to: 8 - type: integer 
+	Parameter wordLength bound to: 16 - type: integer 
+	Parameter cellNum bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/RAM.vhd:8' bound to instance 'bffrNoise' of component 'RAM' [C:/Users/hadis/Documents/VHDL/TopModule/source/TopModule.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/hadis/Documents/VHDL/TopModule/source/RAM.vhd:27]
+	Parameter wordLength bound to: 16 - type: integer 
+	Parameter cellNum bound to: 256 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/hadis/Documents/VHDL/TopModule/source/RAM.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (1#1) [C:/Users/hadis/Documents/VHDL/TopModule/source/RAM.vhd:27]
+	Parameter coefWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'KernelConvolver' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:10' bound to instance 'NoiseFilter' of component 'KernelConvolver' [C:/Users/hadis/Documents/VHDL/TopModule/source/TopModule.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'KernelConvolver' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:30]
+	Parameter coefWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:23]
+	Parameter ACASCREG bound to: 2 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 0 - type: integer 
+	Parameter AMULTSEL bound to: A - type: string 
+	Parameter AREG bound to: 2 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter AUTORESET_PRIORITY bound to: RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 2 - type: integer 
+	Parameter BMULTSEL bound to: B - type: string 
+	Parameter BREG bound to: 2 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 0 - type: integer 
+	Parameter CREG bound to: 1 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 0 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 9'b000000000 
+	Parameter IS_RSTALLCARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_RSTALUMODE_INVERTED bound to: 1'b0 
+	Parameter IS_RSTA_INVERTED bound to: 1'b0 
+	Parameter IS_RSTB_INVERTED bound to: 1'b0 
+	Parameter IS_RSTCTRL_INVERTED bound to: 1'b0 
+	Parameter IS_RSTC_INVERTED bound to: 1'b0 
+	Parameter IS_RSTD_INVERTED bound to: 1'b0 
+	Parameter IS_RSTINMODE_INVERTED bound to: 1'b0 
+	Parameter IS_RSTM_INVERTED bound to: 1'b0 
+	Parameter IS_RSTP_INVERTED bound to: 1'b0 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 1 - type: integer 
+	Parameter OPMODEREG bound to: 0 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREADDINSEL bound to: A - type: string 
+	Parameter PREG bound to: 1 - type: integer 
+	Parameter RND bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_MULT bound to: MULTIPLY - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+	Parameter USE_WIDEXOR bound to: FALSE - type: string 
+	Parameter XORSIMD bound to: XOR24_48_96 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E2_inst' to cell 'DSP48E2' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'Multiplier' (2#1) [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:23]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'coefMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:77]
+INFO: [Synth 8-3491] module 'Multiplier' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:8' bound to instance 'InvDivMult' of component 'Multiplier' [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'Multiplier__parameterized2' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:23]
+	Parameter ACASCREG bound to: 2 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 0 - type: integer 
+	Parameter AMULTSEL bound to: A - type: string 
+	Parameter AREG bound to: 2 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter AUTORESET_PRIORITY bound to: RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 2 - type: integer 
+	Parameter BMULTSEL bound to: B - type: string 
+	Parameter BREG bound to: 2 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 0 - type: integer 
+	Parameter CREG bound to: 1 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 0 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 9'b000000000 
+	Parameter IS_RSTALLCARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_RSTALUMODE_INVERTED bound to: 1'b0 
+	Parameter IS_RSTA_INVERTED bound to: 1'b0 
+	Parameter IS_RSTB_INVERTED bound to: 1'b0 
+	Parameter IS_RSTCTRL_INVERTED bound to: 1'b0 
+	Parameter IS_RSTC_INVERTED bound to: 1'b0 
+	Parameter IS_RSTD_INVERTED bound to: 1'b0 
+	Parameter IS_RSTINMODE_INVERTED bound to: 1'b0 
+	Parameter IS_RSTM_INVERTED bound to: 1'b0 
+	Parameter IS_RSTP_INVERTED bound to: 1'b0 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 1 - type: integer 
+	Parameter OPMODEREG bound to: 0 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREADDINSEL bound to: A - type: string 
+	Parameter PREG bound to: 1 - type: integer 
+	Parameter RND bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_MULT bound to: MULTIPLY - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+	Parameter USE_WIDEXOR bound to: FALSE - type: string 
+	Parameter XORSIMD bound to: XOR24_48_96 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E2_inst' to cell 'DSP48E2' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'Multiplier__parameterized2' (2#1) [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:23]
+WARNING: [Synth 8-5856] 3D RAM coef_r_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-256] done synthesizing module 'KernelConvolver' (3#1) [C:/Users/hadis/Documents/VHDL/TopModule/source/KernelConvolver.vhd:30]
+	Parameter wordLength bound to: 16 - type: integer 
+	Parameter cellNum bound to: 254 - type: integer 
+INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/RAM.vhd:8' bound to instance 'bffrEdge' of component 'RAM' [C:/Users/hadis/Documents/VHDL/TopModule/source/TopModule.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'RAM__parameterized1' [C:/Users/hadis/Documents/VHDL/TopModule/source/RAM.vhd:27]
+	Parameter wordLength bound to: 16 - type: integer 
+	Parameter cellNum bound to: 254 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RAM__parameterized1' (3#1) [C:/Users/hadis/Documents/VHDL/TopModule/source/RAM.vhd:27]
+INFO: [Synth 8-3491] module 'SobelFilter' declared at 'C:/Users/hadis/Documents/VHDL/TopModule/source/SobelFilter.vhd:10' bound to instance 'edgeDetector' of component 'SobelFilter' [C:/Users/hadis/Documents/VHDL/TopModule/source/TopModule.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'SobelFilter' [C:/Users/hadis/Documents/VHDL/TopModule/source/SobelFilter.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'SobelFilter' (4#1) [C:/Users/hadis/Documents/VHDL/TopModule/source/SobelFilter.vhd:25]
+WARNING: [Synth 8-5856] 3D RAM noiseFilterInput_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM edgeDetectorInput_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-256] done synthesizing module 'TopModule' (5#1) [C:/Users/hadis/Documents/VHDL/TopModule/source/TopModule.vhd:34]
+WARNING: [Synth 8-3331] design SobelFilter has unconnected port pixelIn[2][2][7]
+WARNING: [Synth 8-3331] design SobelFilter has unconnected port pixelIn[2][2][6]
+WARNING: [Synth 8-3331] design SobelFilter has unconnected port pixelIn[2][2][5]
+WARNING: [Synth 8-3331] design SobelFilter has unconnected port pixelIn[2][2][4]
+WARNING: [Synth 8-3331] design SobelFilter has unconnected port pixelIn[2][2][3]
+WARNING: [Synth 8-3331] design SobelFilter has unconnected port pixelIn[2][2][2]
+WARNING: [Synth 8-3331] design SobelFilter has unconnected port pixelIn[2][2][1]
+WARNING: [Synth 8-3331] design SobelFilter has unconnected port pixelIn[2][2][0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 488.941 ; gain = 156.570
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 488.941 ; gain = 156.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 488.941 ; gain = 156.570
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xczu4eg-fbvb900-3-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/hadis/Documents/VHDL/TopModule/vivado/TopModule.srcs/constrs_1/new/Constraint.xdc]
+WARNING: [Vivado 12-2489] -period contains time 1.538500 which will be rounded to 1.539 to ensure it is an integer multiple of 1 picosecond [C:/Users/hadis/Documents/VHDL/TopModule/vivado/TopModule.srcs/constrs_1/new/Constraint.xdc:1]
+Finished Parsing XDC File [C:/Users/hadis/Documents/VHDL/TopModule/vivado/TopModule.srcs/constrs_1/new/Constraint.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1478.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 10 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1478.910 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1478.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1478.910 ; gain = 1146.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu4eg-fbvb900-3-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1478.910 ; gain = 1146.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1478.910 ; gain = 1146.539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "bffrNoiseRowCnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bffrEdgeRowCnt" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1478.910 ; gain = 1146.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 8     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 18    
+	   2 Input      8 Bit       Adders := 5     
++---Registers : 
+	               48 Bit    Registers := 20    
+	               20 Bit    Registers := 11    
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	               14 Bit    Registers := 2     
+	               13 Bit    Registers := 14    
+	                8 Bit    Registers := 44    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 10    
+	                1 Bit    Registers := 20    
++---RAMs : 
+	               4K Bit         RAMs := 1     
+	               3K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module TopModule 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 34    
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+Module RAM 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               4K Bit         RAMs := 1     
+Module Multiplier__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Multiplier 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module KernelConvolver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 8     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 11    
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module RAM__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               3K Bit         RAMs := 1     
+Module SobelFilter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 18    
++---Registers : 
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 14    
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 728 (col length:96)
+BRAMs: 256 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[1].coefMultGen2[1].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[1].coefMultGen2[1].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[1].coefMultGen2[2].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[1].coefMultGen2[2].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[1].coefMultGen2[3].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[1].coefMultGen2[3].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[2].coefMultGen2[1].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[2].coefMultGen2[1].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[2].coefMultGen2[2].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[2].coefMultGen2[2].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[2].coefMultGen2[3].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[2].coefMultGen2[3].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[3].coefMultGen2[1].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[3].coefMultGen2[1].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[3].coefMultGen2[2].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[3].coefMultGen2[2].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[3].coefMultGen2[3].coefMult/C_r_reg[1][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[1][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-4471] merging register 'NoiseFilter/coefMultGen1[3].coefMultGen2[3].coefMult/C_r_reg[2][47:0]' into 'NoiseFilter/InvDivMult/C_r_reg[2][47:0]' [C:/Users/hadis/Documents/VHDL/TopModule/source/Multiplier.vhd:31]
+INFO: [Synth 8-5546] ROM "bffrEdgeRowCnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bffrNoiseRowCnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][0]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][1]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][2]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][3]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][4]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][5]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][6]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][7]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][8]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][9]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][10]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][11]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][12]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][13]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][14]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][15]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][16]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][17]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][18]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][19]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][20]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][21]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][22]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][23]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][24]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][25]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][26]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][27]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][28]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][29]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][30]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][31]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][32]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][33]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][34]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][35]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][36]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][37]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][38]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][39]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][40]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][41]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][42]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][43]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][44]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][45]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[1][46]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\NoiseFilter/InvDivMult/C_r_reg[1][47] )
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][0]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][1]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][2]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][3]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][4]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][5]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][6]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][7]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][8]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][9]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][10]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][11]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][12]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][13]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][14]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][15]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][16]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][17]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][18]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][19]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][20]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][21]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][22]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][23]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][24]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][25]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][26]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][27]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][28]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][29]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][30]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][31]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][32]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][33]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][34]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][35]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][36]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][37]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][38]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][39]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][40]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][41]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][42]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][43]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][44]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][45]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][46]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'NoiseFilter/InvDivMult/C_r_reg[2][47]' (FD) to 'NoiseFilter/InvDivMult/C_r_reg[1][47]'
+INFO: [Synth 8-3886] merging instance 'edgeDetector/stagex1_reg[3][10]' (FD) to 'edgeDetector/stagex1_reg[3][11]'
+INFO: [Synth 8-3886] merging instance 'edgeDetector/stagex1_reg[3][11]' (FD) to 'edgeDetector/stagex1_reg[3][12]'
+INFO: [Synth 8-3886] merging instance 'edgeDetector/stagex1_reg[1][10]' (FD) to 'edgeDetector/stagex1_reg[1][11]'
+INFO: [Synth 8-3886] merging instance 'edgeDetector/stagex1_reg[2][10]' (FD) to 'edgeDetector/stagex1_reg[2][11]'
+INFO: [Synth 8-3886] merging instance 'edgeDetector/stagex1_reg[1][11]' (FD) to 'edgeDetector/stagex1_reg[1][12]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\NoiseFilter/InvDivMult/C_r_reg[1][47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\edgeDetector/stagey1_reg[2][0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1478.910 ; gain = 1146.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++---------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name          | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|RAM:                 | memory_reg | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|RAM__parameterized1: | memory_reg | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
++---------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 1925.270 ; gain = 1592.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+---------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|TopModule   | NoiseFilter/outputRdy_reg | 14     | 1     | NO           | YES                | YES               | 1      | 0       | 
++------------+---------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |CARRY8          |    50|
+|3     |DSP_ALU         |    10|
+|4     |DSP_A_B_DATA    |    10|
+|5     |DSP_C_DATA      |    10|
+|6     |DSP_MULTIPLIER  |    10|
+|7     |DSP_M_DATA      |    10|
+|8     |DSP_OUTPUT      |    10|
+|9     |DSP_PREADD      |    10|
+|10    |DSP_PREADD_DATA |    10|
+|11    |LUT1            |     4|
+|12    |LUT2            |   280|
+|13    |LUT3            |    45|
+|14    |LUT4            |    43|
+|15    |LUT5            |    34|
+|16    |LUT6            |    38|
+|17    |RAMB18E2_1      |     2|
+|18    |SRL16E          |     1|
+|19    |FDRE            |   791|
+|20    |IBUF            |   114|
+|21    |OBUF            |     2|
++------+----------------+------+
+
+Report Instance Areas: 
++------+-----------------------------------------------+------------------------------------------------+------+
+|      |Instance                                       |Module                                          |Cells |
++------+-----------------------------------------------+------------------------------------------------+------+
+|1     |top                                            |                                                |  1485|
+|2     |  NoiseFilter                                  |KernelConvolver                                 |   641|
+|3     |    InvDivMult                                 |Multiplier__parameterized2                      |    55|
+|4     |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel     |     8|
+|5     |    \coefMultGen1[1].coefMultGen2[1].coefMult  |Multiplier                                      |     8|
+|6     |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__1  |     8|
+|7     |    \coefMultGen1[1].coefMultGen2[2].coefMult  |Multiplier_0                                    |     8|
+|8     |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__2  |     8|
+|9     |    \coefMultGen1[1].coefMultGen2[3].coefMult  |Multiplier_1                                    |     8|
+|10    |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__3  |     8|
+|11    |    \coefMultGen1[2].coefMultGen2[1].coefMult  |Multiplier_2                                    |     8|
+|12    |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__4  |     8|
+|13    |    \coefMultGen1[2].coefMultGen2[2].coefMult  |Multiplier_3                                    |     8|
+|14    |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__5  |     8|
+|15    |    \coefMultGen1[2].coefMultGen2[3].coefMult  |Multiplier_4                                    |     8|
+|16    |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__6  |     8|
+|17    |    \coefMultGen1[3].coefMultGen2[1].coefMult  |Multiplier_5                                    |     8|
+|18    |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__7  |     8|
+|19    |    \coefMultGen1[3].coefMultGen2[2].coefMult  |Multiplier_6                                    |     8|
+|20    |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__8  |     8|
+|21    |    \coefMultGen1[3].coefMultGen2[3].coefMult  |Multiplier_7                                    |     8|
+|22    |      DSP48E2_inst                             |\NoiseFilter/InvDivMult/DSP48E2_inst_funnel__9  |     8|
+|23    |  bffrEdge                                     |RAM__parameterized1                             |     5|
+|24    |  bffrNoise                                    |RAM                                             |     5|
+|25    |  edgeDetector                                 |SobelFilter                                     |   385|
++------+-----------------------------------------------+------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1951.480 ; gain = 629.141
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1951.480 ; gain = 1619.109
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 175 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1976.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 125 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 10 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 114 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+171 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 1976.035 ; gain = 1656.684
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1976.035 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hadis/Documents/VHDL/TopModule/vivado/TopModule.runs/synth_1/TopModule.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TopModule_utilization_synth.rpt -pb TopModule_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 22 11:08:35 2025...
