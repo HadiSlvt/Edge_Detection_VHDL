@@ -46,10 +46,10 @@ Implements a DSP48E2-based multiply-add operation with 4-clock latency.
 **Function:**  
 `P = A * B + C`
 
-- A: 27-bit unsigned input  
-- B: 18-bit unsigned input  
-- C: 48-bit unsigned input  
-- P: 48-bit unsigned output  
+- A: 27-bit signed input  
+- B: 18-bit signed input  
+- C: 48-bit signed input  
+- P: 48-bit signed output  
 
 **Implementation Details:**
 
