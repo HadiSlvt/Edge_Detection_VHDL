@@ -82,7 +82,7 @@ Performs a 3x3 kernel convolution on an 8-bit image patch using a signed coeffic
 - DSP Usage: 10 (9 for convolution + 1 for normalization)
 
 **Diagram Placeholder:**  
-`docs/kernelconvolver.jpg`
+![Kernel Convolver](TopModule/docs/kernelconvolver.jpg)
 
 ---
 
@@ -104,7 +104,7 @@ Calculates edge strength using the Sobel operator on a 3x3 grayscale patch.
 - Latency: 5 clock cycles
 
 **Diagram Placeholder:**  
-`docs/sobelfilter.jpg`
+![Sobel Filter](TopModule/docs/sobelfilter.jpg)
 
 ---
 
@@ -144,7 +144,7 @@ If input image is N x M, output will be (N - 4) x (M - 4), due to two 3x3 convol
 **Memory Usage:** Efficient use of BRAM for buffering (e.g., for width=256, only 1 BRAM needed compared to ~8k flip-flops with shift registers).
 
 **Diagram Placeholder:**  
-`docs/topmodule.png`
+![Top Module](TopModule/docs/topmodule.png)
 
 ---
 
