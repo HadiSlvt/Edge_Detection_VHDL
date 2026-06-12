@@ -156,7 +156,7 @@ If input image is N x M, output will be (N - 4) x (M - 4), due to two 3x3 convol
 
 ##  MATLAB-Based Verification
 
-Located in the `matlab/` folder.
+Located in the `test/` folder.
 
 **Testing Procedure:**
 
