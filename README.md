@@ -81,8 +81,10 @@ Performs a 3x3 kernel convolution on an 8-bit image patch using a signed coeffic
 - Latency: 13 clock cycles  
 - DSP Usage: 10 (9 for convolution + 1 for normalization)
 
-**Diagram:**  
-![Kernel Convolver](TopModule/docs/kernelconvolver.jpg)
+<div align="center">
+  <img src="TopModule/docs/kernelconvolver.jpg" alt="Output" width="700"/>
+  <p><b>Figure 1:</b> Kernel Convolver Diagram</p>
+</div>
 
 ---
 
@@ -103,8 +105,10 @@ Calculates edge strength using the Sobel operator on a 3x3 grayscale patch.
 - No DSP used (multiplications implemented as shifts)  
 - Latency: 5 clock cycles
 
-**Diagram:**  
-![Sobel Filter](TopModule/docs/sobelfilter.jpg)
+<div align="center">
+  <img src="TopModule/docs/sobelfilter.jpg" alt="Output" width="500"/>
+  <p><b>Figure 2:</b> Sobel Filter Diagram</p>
+</div>
 
 ---
 
@@ -143,8 +147,10 @@ If input image is N x M, output will be (N - 4) x (M - 4), due to two 3x3 convol
 **DSP Usage:** 10  
 **Memory Usage:** Efficient use of BRAM for buffering (e.g., for width=256, only 1 BRAM needed compared to ~8k flip-flops with shift registers).
 
-**Diagram:**  
-![Top Module](TopModule/docs/topmodule.png)
+<div align="center">
+  <img src="TopModule/docs/topmodule.png" alt="Output" width="700"/>
+  <p><b>Figure 3:</b> Top Module Diagram</p>
+</div> 
 
 ---
 
@@ -163,6 +169,42 @@ Located in the `matlab/` folder.
 
 Optional:
 - Code for random input generation is included (commented out by default).
+
+---
+
+## Implementation Details
+
+The design was synthesized and implemented using Vivado. Post-implementation reports confirm that the target timing requirements are satisfied while maintaining very low resource utilization and power consumption. Despite operating at high frequency, the architecture requires only a small number of FPGA resources, demonstrating the efficiency of the proposed pipelined implementation.
+
+<div align="center">
+  <img src="TopModule/docs/Imp_Detail.png" alt="Vivado Design Summary" width="900"/>
+  <p><b>Figure 4:</b> Vivado synthesis and implementation summary</p>
+</div>
+
+To further analyze the hardware cost distribution, the post-implementation utilization report is shown below. The report provides a module-level breakdown of FPGA resource consumption, highlighting the contribution of each subsystem to the overall design footprint.
+
+<div align="center">
+  <img src="TopModule/docs/Utilization.png" alt="Hierarchical Utilization Report" width="700"/>
+  <p><b>Figure 5:</b> Hierarchical resource utilization report showing the distribution of LUTs, flip-flops, BRAMs, DSPs, and other FPGA resources across the design modules.</p>
+</div>
+
+---
+
+## MATLAB and VHDL Output Comparison
+
+Functional verification was performed by comparing the hardware-generated output against the MATLAB fixed-point reference model. The comparison demonstrates that the synthesized VHDL implementation reproduces the expected behavior exactly.
+
+<div align="center">
+  <img src="TopModule/docs/Result.jpg" alt="MATLAB and VHDL Output Comparison" width="900"/>
+  <p><b>Figure 6:</b> Representative verification example. From left to right: the input grayscale image, the MATLAB reference output, and the corresponding VHDL output obtained from simulation. </p>
+</div>
+
+To quantitatively validate the equivalence between both implementations, the number of mismatched pixels was evaluated. As shown below, the error metric remains zero for all tested samples, indicating perfect agreement between the MATLAB model and the VHDL design.
+
+<div align="center">
+  <img src="TopModule/docs/Error.jpg" alt="Pixel Mismatch Analysis" width="400"/>
+  <p><b>Figure 7:</b> Pixel mismatch analysis between MATLAB and VHDL outputs</p>
+</div>
 
 ---
 
@@ -209,4 +251,4 @@ These improvements would allow the system to scale efficiently with available ha
 
 ##  Author
 
-**[Hadi Salavati]**
+**Hadi Salavati**
